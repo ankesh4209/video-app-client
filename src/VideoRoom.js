@@ -22,7 +22,8 @@ const VideoRoom = () => {
       .catch(error => console.error('Error accessing media devices:', error));
 
     // Initialize socket
-    socketRef.current = io('http://localhost:5000');
+    const SOCKET_SERVER = process.env.REACT_APP_SERVER_URL || 'http://localhost:5000';
+    socketRef.current = io(SOCKET_SERVER);
     userName.current = `User-${Math.random().toString(36).substr(2, 9)}`;
 
     socketRef.current.emit('user-join', {
@@ -110,7 +111,7 @@ const VideoRoom = () => {
   return (
     <div className="video-room-container">
       <h1>Real-Time Video Conference</h1>
-      
+
       <div className="videos-grid">
         <div className="video-item">
           <video
