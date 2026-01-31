@@ -1,0 +1,36 @@
+.background-blur-widget {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.blur-btn {
+  padding: 6px 12px;
+  background: rgba(76, 205, 122, 0.3);
+  color: white;
+  border: 1px solid rgba(76, 205, 122, 0.6);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.blur-btn:hover {
+  background: rgba(76, 205, 122, 0.5);
+}
+
+.blur-btn.active {
+  background: rgba(76, 205, 122, 0.7);
+  box-shadow: 0 0 12px rgba(76, 205, 122, 0.4);
+}
+
+.blur-indicator {
+  font-size: 12px;
+  color: #4ccd7a;
+  font-weight: 600;
+}

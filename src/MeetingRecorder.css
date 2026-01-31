@@ -1,0 +1,91 @@
+.recorder-widget {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.record-btn {
+  padding: 6px 12px;
+  background: rgba(220, 50, 50, 0.3);
+  color: white;
+  border: 1px solid rgba(220, 50, 50, 0.6);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.record-btn:hover {
+  background: rgba(220, 50, 50, 0.5);
+}
+
+.record-btn.recording {
+  background: rgba(220, 50, 50, 0.6);
+  animation: pulse-record 1s infinite;
+}
+
+.record-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.record-dot.active {
+  background: #ff4444;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes pulse-record {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 50, 50, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(220, 50, 50, 0);
+  }
+}
+
+.recording-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: rgba(220, 50, 50, 0.2);
+  border-radius: 6px;
+}
+
+.rec-dot {
+  width: 6px;
+  height: 6px;
+  background: #ff4444;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+.rec-time {
+  font-size: 12px;
+  color: white;
+  font-weight: 600;
+  font-family: "Courier New", monospace;
+  min-width: 50px;
+}

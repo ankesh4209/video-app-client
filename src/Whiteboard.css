@@ -1,0 +1,117 @@
+.whiteboard-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.whiteboard-container {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.whiteboard-toolbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-group label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.color-picker {
+  width: 40px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.size-slider {
+  width: 100px;
+  height: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.size-value {
+  font-size: 12px;
+  min-width: 35px;
+}
+
+.toolbar-btn {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.toolbar-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.clear-btn:hover {
+  background: rgba(255, 100, 100, 0.3);
+}
+
+.download-btn:hover {
+  background: rgba(76, 205, 122, 0.3);
+}
+
+.close-btn:hover {
+  background: rgba(255, 100, 100, 0.4);
+}
+
+.whiteboard-canvas {
+  flex: 1;
+  background: white;
+  cursor: crosshair;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .whiteboard-container {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .whiteboard-canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .whiteboard-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
